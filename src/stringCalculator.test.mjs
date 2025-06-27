@@ -19,4 +19,8 @@ describe("StringCalculator", () => {
   test("returns sum of multiple comma-separated numbers", () => {
     expect(calculator.add("1,2,3,4")).toBe(10);
   });
+  test("handles newline as delimiter", () => {
+    expect(calculator.add("1\n2,3")).toBe(6);
+  });
+  
 });
